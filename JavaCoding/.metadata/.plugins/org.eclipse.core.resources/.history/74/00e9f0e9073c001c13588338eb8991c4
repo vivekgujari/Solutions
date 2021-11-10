@@ -1,0 +1,24 @@
+package LinkedList;
+
+public class LinkedList {
+	class Node{
+		int val;
+		Node next;
+		public Node(int val)
+		{
+			this.val = val;
+			this.next = null;
+		}
+	}
+	
+	Node head = null;
+	Node tail = null;
+	
+	public void addFirst(Node item)
+	{
+		if(head == null)
+		{
+			head = item;
+		}
+	}
+}

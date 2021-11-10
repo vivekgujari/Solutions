@@ -1,0 +1,28 @@
+import static java.lang.System.out;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import LinkedList.LinkedList;
+import LinkedList.Node;
+import Arrays.Alternate_pos_neg;
+import Arrays.ThirdLargest;
+import String.AddBinaryStrings;
+import String.DecodeString;
+import String.FirstNonRepeatingChar;
+import String.LPS;
+import Trie.Trie;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Trie T = new Trie();
+		T.insert("mouse");
+		T.insert("monitor");
+		T.insert("moneypot");
+		out.print(T.search("moneypo") + "\n");
+		T.crawl("mo");
+		out.print(T.output.toString()+"\n");
+		out.print("End of main program");
+	}
+
+}

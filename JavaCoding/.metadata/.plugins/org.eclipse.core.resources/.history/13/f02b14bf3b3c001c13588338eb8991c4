@@ -1,0 +1,20 @@
+import static java.lang.System.out;
+
+import java.util.Arrays;
+import LinkedList.LinkedList;
+import Arrays.Alternate_pos_neg;
+import Arrays.ThirdLargest;
+import String.AddBinaryStrings;
+import String.DecodeString;
+import String.FirstNonRepeatingChar;
+import String.LPS;
+
+public class Program {
+
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList();
+		
+		list.add(new list.Node(5));
+	}
+
+}

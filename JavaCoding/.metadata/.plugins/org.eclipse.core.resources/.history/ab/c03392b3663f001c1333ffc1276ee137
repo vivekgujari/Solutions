@@ -1,0 +1,65 @@
+package Trie;
+import java.util.*;
+
+public class Trie {
+	public class TrieNode{
+		public String value;
+		public HashMap<String, TrieNode> children = new HashMap<>();
+		public boolean end;
+		public TrieNode()
+		{
+			end = false;
+			int i = 0;
+			children = new TrieNode[26];
+			while(i < 26)
+			{
+				children[i] = null;
+				i++;
+			}
+		}
+		
+		@Override
+		public String toString()
+		{
+			return "TrieNode -> " + this.value;
+		}
+		
+	}
+	public TrieNode root;
+	
+	public Trie()
+	{
+		root = new TrieNode();
+	}
+	public void insert(String word)
+	{
+		TrieNode a = root;
+		for(int i = 0; i < word.length(); i++)
+		{
+			int k = word.charAt(i) - 'a';
+			if(a.children[k] == null)
+			{
+				a.children[k] = new TrieNode();
+			}
+			a = a.children[k];
+		}
+		a.end = true;
+	}
+	
+	public boolean search(String word)
+	{
+		TrieNode a = root;
+		for(int i = 0; i < word.length(); i++)
+		{
+			int k = word.charAt(i) - 'a';
+			if(a.children[k] == null)
+				return false;
+			a = a.children[k];
+		}
+		return a.end;
+	}
+	
+	/// web crawl after typing 2 letters in search engine
+	
+
+}
