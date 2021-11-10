@@ -13,9 +13,8 @@ namespace Project1
     {
         public static void Main(string[] args)
         {
-            int[] array = { 2, 5, 9, 3, 1, 6, 4, 7};
-            QuickSort.sort(array);
-            Console.WriteLine(String.Join(",", array));
+            string word = "abbbcc";
+            
             Console.ReadKey();
         }
 
